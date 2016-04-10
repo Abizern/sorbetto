@@ -11,7 +11,7 @@ func markdown() -> Plugin {
         document = try? parser.document(),
         contents = document.dataUsingEncoding(NSUTF8StringEncoding)
       {
-        filesMap[path] = File(contents: contents, context: file.context)
+        filesMap[path] = FileLens.contents.to(contents, file)
       }
     }
 

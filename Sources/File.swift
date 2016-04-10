@@ -3,8 +3,8 @@ import PathKit
 import Yaml
 
 public struct File {
-  public let contents: NSData
-  public let context: [Yaml : Yaml]
+  let contents: NSData
+  let context: [Yaml : Yaml]
 
   public init(contents: NSData, context: [Yaml : Yaml]) {
     self.contents = contents
